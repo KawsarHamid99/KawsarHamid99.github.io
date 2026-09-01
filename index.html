@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kawsar Hamid — AI/ML Engineer</title>
+<meta name="description" content="AI/ML Engineer working on agentic systems, LLM applications, RAG, and trustworthy machine learning. M.S. in Artificial Intelligence.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0e12; --bg-soft:#12151b; --card:#151920; --line:#232833;
+  --fg:#e7ebf2; --fg-dim:#9aa4b5; --fg-faint:#6c7688;
+  --accent:#5b9cff; --accent-soft:rgba(91,156,255,.12);
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --max:1180px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#fbfcfe; --bg-soft:#f3f5f9; --card:#fff; --line:#e3e8ef;
+    --fg:#141821; --fg-dim:#525c6e; --fg-faint:#7b8697;
+    --accent:#1e63d0; --accent-soft:rgba(30,99,208,.08);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+@media(max-width:640px){.wrap{padding:0 20px}}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.brand{font-weight:700;letter-spacing:-.02em;color:var(--fg)}
+.brand:hover{text-decoration:none}
+.navlinks{display:flex;gap:22px;font-size:14px}
+.navlinks a{color:var(--fg-dim)}
+.navlinks a:hover{color:var(--fg);text-decoration:none}
+@media(max-width:620px){.navlinks{display:none}}
+
+/* ---------- hero ---------- */
+header.hero{padding:72px 0 58px;border-bottom:1px solid var(--line)}
+.hero-inner{display:flex;gap:38px;align-items:flex-start}
+@media(max-width:700px){.hero-inner{flex-direction:column;gap:24px;align-items:center;text-align:center}}
+.avatar{
+  width:168px;height:168px;flex:0 0 168px;border-radius:50%;object-fit:cover;
+  border:1px solid var(--line);box-shadow:0 6px 28px rgba(0,0,0,.22);
+}
+@media(max-width:700px){.avatar{width:132px;height:132px;flex-basis:132px}}
+.hero-text{min-width:0}
+.role{
+  font-size:16px;color:var(--accent);margin:0 0 18px;font-weight:500;letter-spacing:-.005em;
+}
+@media(max-width:700px){.links{justify-content:center}}
+.eyebrow{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 14px;
+}
+h1{font-size:clamp(34px,5.4vw,48px);line-height:1.06;letter-spacing:-.03em;margin:0 0 8px;font-weight:700}
+.lede{font-size:clamp(17px,1.5vw,19px);color:var(--fg-dim);max-width:66ch;margin:0 0 28px}
+.lede strong{color:var(--fg);font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:8px;
+  border:1px solid var(--line);background:var(--card);color:var(--fg);
+  font-size:14px;font-weight:500;transition:border-color .15s,background .15s;
+}
+.links a:hover{border-color:var(--accent);background:var(--accent-soft);text-decoration:none}
+.links a svg{width:16px;height:16px;fill:currentColor;flex:0 0 16px;opacity:.85}
+.links a.primary{
+  background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;
+}
+.links a.primary svg{opacity:1;fill:#fff}
+.links a.primary:hover{filter:brightness(1.08);background:var(--accent);border-color:var(--accent)}
+.links a.primary:hover svg{fill:#fff}
+.links a .sub{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+  opacity:.72;font-weight:500;
+}
+.links a.secondary{
+  background:var(--card);border-color:var(--line);color:var(--fg);font-weight:500;
+}
+.links a.secondary svg{fill:currentColor;opacity:.85}
+.links a.secondary:hover{background:var(--accent-soft);border-color:var(--accent)}
+.links a:hover svg{opacity:1;fill:var(--accent)}
+.meta{margin-top:24px;font-family:var(--mono);font-size:13px;color:var(--fg-faint)}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{
+  font-size:13px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--fg-faint);margin:0 0 28px;font-weight:500;
+}
+h3{font-size:19px;margin:0 0 6px;letter-spacing:-.01em;font-weight:600}
+p{margin:0 0 16px}
+p:last-child{margin-bottom:0}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:18px}
+@media(min-width:760px){.grid.two{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.grid.two{gap:22px}}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;
+  transition:border-color .15s,transform .15s;
+}
+.card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.stack{
+  font-family:var(--mono);font-size:12px;color:var(--fg-faint);
+  margin:12px 0 0;letter-spacing:.01em;
+}
+.card p{font-size:15px;color:var(--fg-dim);margin:0}
+.tag{
+  display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+  padding:3px 9px;border-radius:5px;margin-bottom:12px;
+}
+
+/* ---------- lists ---------- */
+.entry{padding:20px 0;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0;padding-bottom:0}
+.entry:first-child{padding-top:0}
+.entry-head{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;justify-content:space-between}
+.entry-head .when{font-family:var(--mono);font-size:12.5px;color:var(--fg-faint);white-space:nowrap}
+.entry .where{color:var(--fg-dim);font-size:15px;margin:0 0 8px}
+.entry ul{margin:8px 0 0;padding-left:18px;color:var(--fg-dim);font-size:15px}
+.entry li{margin-bottom:5px}
+
+.research-lede{color:var(--fg-dim);margin:0 0 18px;font-size:15.5px}
+.ri-head{
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--fg-faint);font-weight:500;margin:34px 0 14px;
+}
+.ri-list{margin:0 0 30px;padding-left:0;list-style:none}
+.ri-list li{
+  position:relative;padding-left:20px;margin-bottom:9px;color:var(--fg-dim);font-size:15px;
+}
+.ri-list li::before{
+  content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;
+  background:var(--accent);opacity:.65;
+}
+.ri-list strong{color:var(--fg);font-weight:600}
+.pub{padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--fg-dim)}
+.pub:last-child{border-bottom:0}
+.pub .title{color:var(--fg);font-weight:500}
+.pub .venue{font-style:italic}
+.status{
+  font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--fg-faint);border:1px solid var(--line);padding:2px 7px;border-radius:4px;
+  margin-left:6px;white-space:nowrap;
+}
+
+/* ---------- skills ---------- */
+.skillrow{display:grid;gap:6px 20px;padding:12px 0;border-bottom:1px solid var(--line)}
+@media(min-width:700px){.skillrow{grid-template-columns:190px 1fr}}
+.skillrow:last-child{border-bottom:0}
+.skillrow dt{font-weight:600;font-size:14.5px}
+.skillrow dd{margin:0;color:var(--fg-dim);font-size:14.5px}
+
+footer{padding:48px 0 64px;color:var(--fg-faint);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+footer a{color:var(--fg-dim)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Kawsar Hamid</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-inner">
+    <img class="avatar" src="kawsarProfile.png" alt="Kawsar Hamid">
+    <div class="hero-text">
+      <h1>Kawsar Hamid</h1>
+      <p class="role">AI/ML Engineer &nbsp;·&nbsp; Agentic Systems, LLM Applications &amp; RAG</p>
+      <p class="lede">
+        I build <strong>multi-agent architectures, LLM applications, and retrieval-augmented generation systems</strong>,
+        and work on the harder question underneath them: how you measure whether such a system actually works.
+        Completing an M.S. in Artificial Intelligence, with two years of production software engineering before it.
+      </p>
+      <div class="links">
+        <a href="https://github.com/KawsarHamid99"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/kawsar-hamid-6b6a86241/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=QiFW6wIAAAAJ&hl=en"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>Google Scholar</a>
+        <a href="mailto:kawsarhamid7225@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>Email</a>
+        <!--  
+        <a class="primary" id="dl-industry" href="Kawsar_Hamid_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577 8.462 12.04l.707-.72L11.5 13.65V4h1v9.65l2.33-2.33.708.719zM6 19q-.633 0-1.066-.434Q4.5 18.134 4.5 17.5v-2.423h1V17.5q0 .192.163.356.163.163.356.163h12q.192 0 .356-.163.163-.164.163-.356v-2.423h1V17.5q0 .634-.434 1.066Q18.634 19 18 19z"/></svg>Résumé <span class="sub">industry</span></a>
+        <a class="primary" id="dl-academic" href="Kawsar_Hamid_Academic_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577 8.462 12.04l.707-.72L11.5 13.65V4h1v9.65l2.33-2.33.708.719zM6 19q-.633 0-1.066-.434Q4.5 18.134 4.5 17.5v-2.423h1V17.5q0 .192.163.356.163.163.356.163h12q.192 0 .356-.163.163-.164.163-.356v-2.423h1V17.5q0 .634-.434 1.066Q18.634 19 18 19z"/></svg>Academic CV <span class="sub">research</span></a>
+        -->
+      </div>
+      <p class="meta">New York, NY &nbsp;·&nbsp; M.S. Artificial Intelligence, Dec 2026 &nbsp;·&nbsp; Open to AI / ML / LLM engineering roles</p>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected Work</h2>
+    <div class="grid two">
+
+      <article class="card">
+        <span class="tag">Multi-agent · MCP</span>
+        <h3>MCP Multi-Agent Assistant</h3>
+        <p>
+          A multi-agent system where every agent reaches its tools over the <strong>Model Context Protocol</strong> —
+          three servers unified behind one client across stdio and streamable-HTTP transports, including one I wrote
+          with FastMCP. Agent state is checkpointed to PostgreSQL, so a run resumes by thread ID after a process
+          restart. Intermittent failures traced to unbounded tool output led to token budgeting that trims payloads
+          before prompt assembly.
+        </p>
+        <p class="stack">LangGraph · MCP · FastMCP · Groq · PostgreSQL</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Orchestration</span>
+        <h3>Supervisor-Routed Agent System</h3>
+        <p>
+          A supervisor agent inspects shared typed state and routes work dynamically among researcher, analyst, and
+          writer agents — terminating when the task is actually complete rather than running a fixed sequence.
+          Built on conditional graph edges with a dedicated tool-executor node.
+        </p>
+        <p class="stack">LangGraph · Llama 3.1 · Tavily</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Retrieval</span>
+        <h3>Conversational RAG</h3>
+        <p>
+          Question answering over document corpora with a history-aware retriever that rewrites follow-up questions
+          into standalone queries before retrieval, keeping multi-turn context intact per session. I compared Chroma
+          against FAISS and Sentence-Transformers against local Ollama embeddings rather than keeping the first
+          configuration that ran.
+        </p>
+        <p class="stack">LangChain · ChromaDB · FAISS · Sentence-Transformers</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Deep learning</span>
+        <h3>LSTM Language Model</h3>
+        <p>
+          A stacked LSTM next-word prediction model — embedding → LSTM → dropout → LSTM → softmax — trained on n-gram
+          sequences with early stopping on validation loss and best-weight restoration. Trained model and fitted
+          tokenizer packaged behind an inference app.
+        </p>
+        <p class="stack">TensorFlow / Keras · Streamlit</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research</h2>
+    <p class="research-lede">
+      My research sits on the measurement side of machine learning. A model reports a number; the number is trusted;
+      and often the number was produced by something other than the ability it claims to measure — a feature that
+      leaked information from the future, a metric that flatters a classifier on an imbalanced dataset, an evaluation
+      split that was never really held out. My published and in-review work has been about pinning down when that
+      happens and how to build benchmarks that resist it.
+    </p>
+    <p class="research-lede">
+      I think agentic systems are where this problem is about to get much worse. A multi-agent run touches retrieval,
+      tool calls, and persistent state across many steps, and we currently score it as a single success or failure.
+      That hides almost everything worth knowing: which agent went wrong, whether a benchmark was contaminated by
+      training data, whether a run that "succeeded" did so for the wrong reason, and how partial progress should
+      count. Building the evaluation methodology these systems lack is the direction I want to take next.
+    </p>
+
+    <h4 class="ri-head">Current interests</h4>
+    <ul class="ri-list">
+      <li><strong>Evaluation methodology for autonomous agents</strong> — metrics for partial and compounding failure, contamination-aware benchmarks, replayable runs</li>
+      <li><strong>Fault attribution in multi-agent systems</strong> — identifying which agent, tool call, or piece of retained state caused a failure</li>
+      <li><strong>Data leakage and reproducibility</strong> — leakage-aware protocols for graph-structured and temporal data</li>
+      <li><strong>Class imbalance in high-stakes detection</strong> — fraud, illicit transactions, and the accuracy paradox</li>
+      <li><strong>Retrieval and memory</strong> — grounding, context management, compression, and what agents should retain or forget</li>
+    </ul>
+
+    <div class="pub">
+      <div class="title">Prediction of Cryptocurrency Price using Machine Learning Techniques and Public Sentiment Analysis</div>
+      M. H. Mishal, N. J. Rakhi, F. Rashid, <strong style="color:var(--fg)">K. Hamid</strong>, M. K. Morol, A. Al Jubair, D. Nandi ·
+      <span class="venue">25th International Conference on Computer and Information Technology (ICCIT)</span>, IEEE, 2022.
+      <a href="https://doi.org/10.1109/ICCIT57492.2022.10055524">DOI</a>
+      <span class="status">Published · Presented</span>
+    </div>
+
+    <div class="pub">
+      <div class="title">A Reproducible, Leakage-Aware Benchmark for Illicit Transaction Detection on the Elliptic Bitcoin Dataset</div>
+      <span class="venue">Scientific Reports</span> (Springer Nature)
+      <span class="status">Under review</span>
+    </div>
+
+    <div class="pub">
+      <div class="title">Evaluating Resampling Strategies and Gradient Boosting Models to Address the Accuracy Paradox in Fraud Detection</div>
+      <span class="venue">Scientific Reports</span> (Springer Nature)
+      <span class="status">Under review</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience &amp; Education</h2>
+
+    <div class="entry">
+      <div class="entry-head"><h3>Software Engineer</h3><span class="when">Jan 2023 – Jul 2024</span></div>
+      <p class="where">BNX Networks Inc. · Remote</p>
+      <ul>
+        <li>Built and maintained production Django applications across e-commerce, healthcare, booking, and scoring — several still publicly deployed.</li>
+        <li>Designed REST APIs connecting frontend clients to backend services, working with designers and product managers to ship on schedule.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><h3>Software Engineer Trainee</h3><span class="when">Sep – Dec 2022</span></div>
+      <p class="where">Tiger Park Limited · Dhaka, Bangladesh</p>
+      <ul>
+        <li>Implemented backend functionality for an e-commerce platform in Django; took part in architecture design, code review, and debugging.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><h3>Research Intern</h3><span class="when">Summer 2021 – 2022</span></div>
+      <p class="where">Faculty of Science and Technology, AIUB · Supervisor: Md. Kishor Morol</p>
+      <ul>
+        <li>Machine learning and public sentiment analysis research that became my undergraduate thesis, an IEEE ICCIT publication, and the university's Vice Chancellor's Award for Best Thesis.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><h3>M.S. Artificial Intelligence</h3><span class="when">Expected Dec 2026</span></div>
+      <p class="where">University of the Cumberlands · GPA 3.75 / 4.00</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head"><h3>B.Sc. Computer Science &amp; Engineering</h3><span class="when">2019 – 2022</span></div>
+      <p class="where">American International University-Bangladesh · CGPA 3.84 / 4.00</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl style="margin:0">
+      <div class="skillrow"><dt>Agents &amp; LLM</dt><dd>LangGraph, LangChain, Model Context Protocol (MCP), FastMCP, OpenAI API, Groq, Ollama, Hugging Face, tool &amp; function calling, supervisor routing, agent checkpointing, prompt engineering</dd></div>
+      <div class="skillrow"><dt>Retrieval &amp; RAG</dt><dd>ChromaDB, FAISS, Sentence-Transformers, embeddings, chunking strategies, history-aware retrieval, context-grounded prompting</dd></div>
+      <div class="skillrow"><dt>Machine learning</dt><dd>TensorFlow / Keras, scikit-learn, RNN &amp; LSTM, sequence modeling, gradient boosting, class-imbalance methods, precision / recall / F1, PR-AUC, leakage analysis</dd></div>
+      <div class="skillrow"><dt>Engineering</dt><dd>Python, SQL, JavaScript, FastAPI, Django, Django REST Framework, PostgreSQL, SQLAlchemy, Docker, pytest, Git, GitHub Actions, Streamlit</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p style="color:var(--fg-dim);max-width:60ch">
+      I'm finishing my master's in December 2026 and looking for AI Engineer, ML Engineer, or LLM Engineer roles.
+      The fastest way to reach me is email.
+    </p>
+    <div class="links" style="margin-top:22px">
+      <a href="mailto:kawsarhamid7225@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>khamid34923@cumberlands.edu</a>
+      <a href="https://www.linkedin.com/in/kawsar-hamid-6b6a86241/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+      <!--<a href="Kawsar_Hamid_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577 8.462 12.04l.707-.72L11.5 13.65V4h1v9.65l2.33-2.33.708.719zM6 19q-.633 0-1.066-.434Q4.5 18.134 4.5 17.5v-2.423h1V17.5q0 .192.163.356.163.163.356.163h12q.192 0 .356-.163.163-.164.163-.356v-2.423h1V17.5q0 .634-.434 1.066Q18.634 19 18 19z"/></svg>Résumé (industry)</a>
+      <a href="Kawsar_Hamid_Academic_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.577 8.462 12.04l.707-.72L11.5 13.65V4h1v9.65l2.33-2.33.708.719zM6 19q-.633 0-1.066-.434Q4.5 18.134 4.5 17.5v-2.423h1V17.5q0 .192.163.356.163.163.356.163h12q.192 0 .356-.163.163-.164.163-.356v-2.423h1V17.5q0 .634-.434 1.066Q18.634 19 18 19z"/></svg>Academic CV (research)</a>
+      --->
+      <a href="https://github.com/KawsarHamid99"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+      
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="position: relative;">
+    © <span id="yr">2026</span> Kawsar Hamid. All rights reserved.
+    <span style="opacity:.7">· Built with plain HTML and CSS, hosted on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// Optional targeting: append ?for=research or ?for=industry to the URL you share.
+// Professors get the CV emphasised; recruiters get the resume. Default shows both equally.
+(function () {
+  try {
+    var who = new URLSearchParams(location.search).get('for');
+    if (!who) return;
+    var academic = document.getElementById('dl-academic');
+    var industry = document.getElementById('dl-industry');
+    if (!academic || !industry) return;
+    var lead = who === 'research' ? academic : industry;
+    var other = who === 'research' ? industry : academic;
+    other.classList.remove('primary');
+    other.classList.add('secondary');
+    lead.parentNode.insertBefore(lead, lead.parentNode.firstChild);
+  } catch (e) { /* links still work unstyled */ }
+})();
+</script>
+</body>
+</html>
