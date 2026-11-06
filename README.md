@@ -14,3 +14,4 @@ To add a project, copy an existing `<article class="card">` block inside `.grid.
 ## Publishing
 
 Pushing to `main` redeploys automatically via GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
+ all updated
